@@ -34,5 +34,5 @@ steps:
       SourcePath: $(System.DefaultWorkingDirectory)\public
       azureSubscription: gatsbyconnection
       Destination: AzureBlob
-      storage: jamstack
+      storage: jamstack1
       ContainerName: '$web'
