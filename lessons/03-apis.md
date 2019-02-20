@@ -1,7 +1,7 @@
 ---
-path: "/components"
-title: "Components"
-order: 1
+path: "/api"
+title: "APIs"
+order: 2
 ---
 
 # Connect to API

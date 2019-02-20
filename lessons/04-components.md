@@ -1,10 +1,14 @@
 ---
-path: "/intro"
-title: "Introduction"
-order: 0
+path: "/components"
+title: "Components"
+order: 3
 ---
 
-# In this session you'll learn about components
+# Intro to React
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSkpoQBP41LnP2nNqiFrx-cFJ3h7yijCd825nZooPUJkgEihpooVBaljZ-DOyEiJLmWuwty5iNpDO0m/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
 
 ## First task: display list of elements from object
 

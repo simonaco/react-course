@@ -1,7 +1,7 @@
 ---
 path: "/redux"
 title: "Redux"
-order: 2
+order: 3
 ---
 
 # State management with Redux
