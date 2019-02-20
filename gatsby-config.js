@@ -3,7 +3,7 @@ module.exports = {
     title: "React",
     subtitle: "A JavaScript library for building user interfaces",
     description:
-      "Introduction to React workshop - presented by Simona Cotin and Artur Daschevici",
+      "Introduction to React workshop - presented by Simona Cotin and Artur Daschevici. Thanks Brian Holt (@holtbt) for the awesome gatsby course template.",
     keywords: ["React", "javascript", "gatsby", "course"]
   },
   //pathPrefix: "/my-repo-name", // if you're using GitHub Pages, put the name of the repo here with a leading slash

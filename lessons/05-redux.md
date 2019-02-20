@@ -1,7 +1,7 @@
 ---
 path: "/redux"
 title: "State Management with Redux"
-order: 5
+order: 6
 ---
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSjeUl84G2aUeST1imCbHrdN_GbIk_hG6ZcUf_8VmhgJGpzPY3FTFTlpRVriiYcCLX2CJc9eEWyzHJ7/embed?start=false&loop=false&delayms=30000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
