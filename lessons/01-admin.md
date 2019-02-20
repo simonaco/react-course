@@ -22,6 +22,8 @@ In this workshop we'll learn how to build a website using React
 
 ## Steps
 
-Clone and star Github repository [here](https://github.com/adaschevici/goodreads)
+Fork and star Github repository [here](https://github.com/adaschevici/goodreads)
+
+```git clone https://github.com/<your-username>/goodreads```
 
 Follow steps in next chapters of this guide. Happy Coding!

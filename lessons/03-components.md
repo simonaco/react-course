@@ -1,16 +1,36 @@
 ---
 path: "/components"
-title: "Components"
+title: "React Components"
 order: 3
 ---
 
-# Intro to React
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSC31WRD2-hP7hsVeDeec9qr3I8MLb72VesnLs5WlhltpTHZyjSDWpJq8TroYpGDAdmmv1oSVuJJ076/embed?start=false&loop=false&delayms=30000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSkpoQBP41LnP2nNqiFrx-cFJ3h7yijCd825nZooPUJkgEihpooVBaljZ-DOyEiJLmWuwty5iNpDO0m/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+---
 
+In this session we'll learn:
 
+- Introducing JSX
+- Types of components: functions & class based
+- Props & State
+- Lifecycle methods
 
-## First task: display list of elements from object
+By the end of this session you will have built a search component reading data from a JSON file.
+
+---
+
+We'll start off the first branch in the git repository
+
+```git checkout git checkout 01-react-components```
+
+If you see an error similar to *Please commit your changes or stash them before you switch branches.*, you can either:
+
+1. commit changes to your repo
+
+1. stash changes by running ```git stash save "some_name_here" --include-untracked```
+
+### Part 1: Display list of elements from object
+---
 
 1. Delete contents of App.js class
 
@@ -29,7 +49,8 @@ order: 3
 
 1. Run application ```npm start``` and check browser
 
-## Second task: Listen to events
+## Part 2: Listen to events
+---
 
 1. Add text input and listen to changes to it:
 
@@ -54,9 +75,10 @@ search = () => {
 - Fix search bug: search for Hunger first, search for Harry. Notice nothing is returned anymore. Why? Can you fix it?
 - Update search to be case insensitive
 
-## Third task
+## Part 3: Functional components
+---
 
-1. Functional components: Refactor App.js to extract input and button into a Search component
+1. Refactor App.js to extract input and button into a Search component
 
 - Create *components -> Search -> components* folder structure
 - Create input component as functional:
