@@ -1,7 +1,7 @@
 ---
 path: "/components"
 title: "Components"
-order: 3
+order: 2
 ---
 
 # Intro to React

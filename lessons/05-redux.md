@@ -1,10 +1,11 @@
 ---
 path: "/redux"
-title: "Redux"
-order: 3
+title: "State Management with Redux"
+order: 4
 ---
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSjeUl84G2aUeST1imCbHrdN_GbIk_hG6ZcUf_8VmhgJGpzPY3FTFTlpRVriiYcCLX2CJc9eEWyzHJ7/embed?start=false&loop=false&delayms=30000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
-# State management with Redux
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSn5zHbzMHIXWr3HMTDPBTR4po7kmvZALsthRaBn7JIDZ8ABV53nYs_-8r3bY4Zo4iLQT3Eurp0-0Ae/embed?start=false&loop=false&delayms=30000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 1. Install npm dependencies: ```npm i redux react-redux redux-thunk redux-devtools-extension```
 
