@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/vsts/pipelines/languages/javascript
 
 pool:
-  vmImage: "Ubuntu 16.04"
+  vmImage: 'vs2017-win2016'
 
 steps:
   - task: NodeTool@0
@@ -21,14 +21,14 @@ steps:
     inputs:
       sourceFolder: "$(System.DefaultWorkingDirectory)"
       contents: |
-        public/**/*
+        public\**\*
       targetFolder: "$(Build.ArtifactStagingDirectory)"
       overWrite: true
     displayName: "Copying built static files"
 
-  - task: AzureFileCopy@2
+  - task: AzureFileCopy@3
     inputs:
-      sourcePath: "$(Build.ArtifactStagingDirectory)/public"
+      sourcePath: $(Build.ArtifactStagingDirectory)\public
       azureConnectionType: 'ConnectedServiceNameARM' 
       azureSubscription: 'gatsbyconnection'
       destination: 'azureBlob' 
