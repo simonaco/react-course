@@ -28,7 +28,7 @@ steps:
 
   - task: AzureFileCopy@3
     inputs:
-      sourcePath: $(Build.ArtifactStagingDirectory)/public # This will be the root of your Aurelia project i the staging directory
+      sourcePath: "$(Build.ArtifactStagingDirectory)/public"
       azureConnectionType: 'ConnectedServiceNameARM' 
       azureSubscription: sicotin
       destination: azureBlob 
