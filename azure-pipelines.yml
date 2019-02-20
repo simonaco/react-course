@@ -25,3 +25,11 @@ steps:
       targetFolder: "$(Build.ArtifactStagingDirectory)"
       overWrite: true
     displayName: "Copying built static files"
+  - task: AzureFileCopy@3
+    displayName: 'AzureBlob File Copy'
+    inputs:
+      SourcePath: '$(System.DefaultWorkingDirectory)/simonaco.react-course'
+      azureSubscription: gatsbyconnection
+      Destination: AzureBlob
+      storage: jamstack
+      ContainerName: '$web'
