@@ -1,0 +1,115 @@
+---
+path: "/redux"
+title: "Redux"
+order: 2
+---
+
+# State management with Redux
+
+1. Install npm dependencies: ```npm i redux react-redux redux-thunk redux-devtools-extension```
+
+1. Create actions in *appActions.js* in a new folder called *actions*
+
+```javascript
+
+export const fetchBookSuccessAction = books => ({
+    type:"FETCH_BOOKS_SUCCESS",
+    payload: {
+        books
+    }
+})
+
+export const fetchBooksAction = url => dispatch => {
+    fetch(url)
+      .then(res => res.json())
+      .then(books => {
+        dispatch(fetchBookSuccessAction(books))
+      })
+}
+```
+
+1. Create reducers in *appReducer.js* in a new folder called *reducers*
+
+```javascript
+import { FETCH_BOOKS_SUCCESS } from './../actions/types'
+
+export default (state = {}, action) => {
+    switch(action.type) {
+        case FETCH_BOOKS_SUCCESS:
+            return {
+                books: action.payload.books
+            }
+        default:
+            return state
+    }
+}
+```
+
+1. Create root reducer in *rootReducer.js* in folder called *reducers*
+
+```javascript
+import { combineReducers } from 'redux'
+import appReducer from './appReducer'
+
+export default combineReducers({
+  appReducer
+})
+```
+
+1. Create *index.js* in a new folder called *store* and paste in
+
+```javascript
+import { createStore, applyMiddleware } from 'redux'
+import { composeWithDevTools } from 'redux-devtools-extension'
+import thunk from 'redux-thunk'
+import rootReducer from '../reducers/rootReducer'
+
+
+const composeEnhancers = composeWithDevTools({
+  trace: true
+})
+
+export default function configureStore(initialState={}) {
+  return createStore(
+    rootReducer,
+    initialState,
+    composeEnhancers(applyMiddleware(thunk))
+  )
+}
+```
+
+1. In index.js configure store:
+
+```javascript
+import { Provider } from 'react-redux'
+import configureStore from './store'
+
+ReactDOM.render(<Provider store={configureStore()}><App /></Provider>, document.getElementById('root'));
+```
+
+1. In App.js configure to read data from store:
+
+```javascript
+
+  componentDidMount() {
+    const { fetchBooks } = this.props;
+    fetchBooks('/books');
+  }
+
+App.defaultProps = {
+    books: []
+}
+App.propTypes = {
+  fetchBooks: PropTypes.func.isRequired,
+  books: PropTypes.arrayOf(PropTypes.object)
+}
+const mapStateToProps = state => ({
+  books: state.appReducer.books
+})
+
+const mapDispatchToProps = dispatch => ({
+  fetchBooks: url => dispatch(fetchBooksAction(url))
+})
+export default connect(mapStateToProps, mapDispatchToProps)(App);
+
+```
