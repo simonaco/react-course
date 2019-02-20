@@ -14,8 +14,11 @@ steps:
 
   - script: |
       npm install
+    displayName: 'npm install'
+  
+  - script: |
       npm run build
-    displayName: "Running npm install and build"
+    displayName: 'npm build'
 
   - task: CopyFiles@2
     inputs:
