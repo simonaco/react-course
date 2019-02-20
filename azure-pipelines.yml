@@ -30,10 +30,10 @@ steps:
     inputs:
       sourcePath: "$(Build.ArtifactStagingDirectory)/public"
       azureConnectionType: 'ConnectedServiceNameARM' 
-      azureSubscription: sicotin
-      destination: azureBlob 
-      storage: jamstack 
-      containerName: $web 
-      resourceGroup: jamstack 
+      azureSubscription: 'gatsbyconnection'
+      destination: 'azureBlob' 
+      storage: 'jamstack' 
+      containerName: '$web' 
+      resourceGroup: 'jamstack' 
       copyFilesInParallel: true 
 
