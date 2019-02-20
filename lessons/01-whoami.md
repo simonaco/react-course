@@ -1,6 +1,6 @@
 ---
 path: "/whoami"
-title: "Who are we?
+title: "Who are we?"
 order: 1
 ---
 
