@@ -1,15 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Starter Course",
-    subtitle: "For making great content",
+    title: "React",
+    subtitle: "A JavaScript library for building user interfaces",
     description:
-      "This is the description that will show up when people share as well as on search engines",
-    keywords: [
-      "this is",
-      "a list of keywords and phrase",
-      "that search engines",
-      "will index your page for"
-    ]
+      "Introduction to React workshop - presented by Simona Cotin and Artur Daschevici",
+    keywords: ["React", "javascript", "gatsby", "course"]
   },
   //pathPrefix: "/my-repo-name", // if you're using GitHub Pages, put the name of the repo here with a leading slash
   plugins: [
