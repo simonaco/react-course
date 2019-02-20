@@ -6,7 +6,22 @@ order: 4
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRdoBNP7v2MpLM_4ra47p4xqrKeupSa5agh5FJdNolj1bAbeEwXEWJGPv7s6Nc3Weechu70axXXk-tz/embed?start=false&loop=false&delayms=30000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
-## JSON Server
+---
+
+In this session we'll learn:
+
+- Use JSON server to create an API from a JSON file
+- Read data using fetch
+
+---
+
+```git checkout 02-react-components-breakdown```
+
+If you see an error similar to *Please commit your changes or stash them before you switch branches.*, you can either:
+
+1. commit changes to your repo ```git commit -a -m "message"```
+
+1. stash changes by running ```git stash save "some_name_here" --include-untracked```
 
 ### Create CRUD API using JSON Server
 
