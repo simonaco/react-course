@@ -31,7 +31,7 @@ steps:
   - task: AzureFileCopy@3
     displayName: 'AzureBlob File Copy'
     inputs:
-      SourcePath: '$(System.DefaultWorkingDirectory)/simonaco.react-course'
+      SourcePath: '$(System.DefaultWorkingDirectory)'
       azureSubscription: gatsbyconnection
       Destination: AzureBlob
       storage: jamstack
