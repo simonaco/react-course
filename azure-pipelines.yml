@@ -25,15 +25,3 @@ steps:
       targetFolder: "$(Build.ArtifactStagingDirectory)"
       overWrite: true
     displayName: "Copying built static files"
-
-  - task: AzureFileCopy@3
-    inputs:
-      sourcePath: $(Build.ArtifactStagingDirectory)\public
-      azureConnectionType: 'ConnectedServiceNameARM' 
-      azureSubscription: 'gatsbyconnection'
-      destination: 'azureBlob' 
-      storage: 'jamstack' 
-      containerName: '$web' 
-      resourceGroup: 'jamstack' 
-      copyFilesInParallel: true 
-
