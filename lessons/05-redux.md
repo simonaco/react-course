@@ -9,7 +9,7 @@ order: 6
 
 ---
 
-``git checkout 04-react-components-material```
+```git checkout 04-react-components-material```
 
 If you see an error similar to *Please commit your changes or stash them before you switch branches.*, you can either:
 
