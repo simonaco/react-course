@@ -7,6 +7,18 @@ order: 6
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSn5zHbzMHIXWr3HMTDPBTR4po7kmvZALsthRaBn7JIDZ8ABV53nYs_-8r3bY4Zo4iLQT3Eurp0-0Ae/embed?start=false&loop=false&delayms=30000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
+---
+
+``git checkout 04-react-components-material```
+
+If you see an error similar to *Please commit your changes or stash them before you switch branches.*, you can either:
+
+1. commit changes to your own repo ```git commit -a -m "message"```
+
+1. stash changes by running ```git stash save "some_name_here" --include-untracked```
+
+---
+
 1. Install npm dependencies: ```npm i redux react-redux redux-thunk redux-devtools-extension```
 
 1. Create actions in *appActions.js* in a new folder called *actions*
