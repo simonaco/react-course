@@ -126,3 +126,9 @@ const mapDispatchToProps = dispatch => ({
 export default connect(mapStateToProps, mapDispatchToProps)(App);
 
 ```
+
+## Individual tasks
+
+- Add missing actions - `FETCH_BOOKS_STARTED FETCH_BOOKS_SUCCESS, FETCH_BOOKS_FAILED`
+- Add error handling, API should be turned off
+- Add loading state
