@@ -7,6 +7,8 @@
   A Gatsby starter to get you started creating educational materials using Markdown
 </p>
 
+## You can see the live version of the course [here](https://jamstack1.z6.web.core.windows.net/)
+
 ## Get Started
 
 1. `npm install --global gatsby-cli` - make sure you're on Gatsby v2+
