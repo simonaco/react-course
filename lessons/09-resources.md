@@ -25,6 +25,16 @@ order: 10
 
 - [Storybook](https://storybooks-official.netlify.com/)
 
+## Further reading
+
+- [Styled Components](https://www.styled-components.com/)
+
+- [Functional CSS](https://tachyons.io/)
+
+- [Progressive Web Apps](https://www.nearform.com/blog/building-progressive-web-apps/)
+
+- [Roadmap to learning React](https://cdn-images-1.medium.com/max/1600/0*DWU1i2q8jPrOdXsB.png)
+
 # Best Practices
 
 - [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/)
