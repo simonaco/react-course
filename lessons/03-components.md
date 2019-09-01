@@ -21,7 +21,7 @@ By the end of this session you will have built a search component reading data f
 
 We'll start off the first branch in the git repository
 
-```git checkout git checkout 01-react-components```
+```git checkout 01-react-components```
 
 If you see an error similar to *Please commit your changes or stash them before you switch branches.*, you can either:
 
