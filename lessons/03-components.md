@@ -41,9 +41,10 @@ If you see an error similar to *Please commit your changes or stash them before 
 1. Display books in ul element
 
 ```javascript
-<ul>  {this.state.books.map((book, index)=> (
-<li key={index}>{ `${book.title} - ${book.author}`}</li>
-))}
+<ul>
+  {this.state.books.map((book, index)=> (
+    <li key={index}>{ `${book.title} - ${book.author}`}</li>
+  ))}
 </ul>
 ```
 
@@ -55,7 +56,7 @@ If you see an error similar to *Please commit your changes or stash them before 
 1. Add text input and listen to changes to it:
 
 ```javascript
-<input placeholder="Search here: " onChange={this.onChange}></input>
+<input placeholder="Search here..." onChange={this.onChange}></input>
 
 onChange = (event) => {this.setState({searchTerm:event.target.value})}
 ```
@@ -66,7 +67,8 @@ onChange = (event) => {this.setState({searchTerm:event.target.value})}
 <button onClick={this.search}>Search</button>
 
 search = () => {
-    this.setState({books:this.state.books.filter(book => book.title.includes(this.state.searchTerm))})}
+  this.setState({books:this.state.books.filter(book => book.title.includes(this.state.searchTerm))})
+}
 
 ```
 
@@ -87,14 +89,14 @@ search = () => {
 import React from 'react';
 import PropTypes from 'prop-types'
 const Input = ({onChange}) => {
-    return (
-        <input placeholder="Search here" onChange={onChange}></input>
-    )
+  return (
+    <input placeholder="Search here" onChange={onChange}></input>
+  )
 }
 
 Input.defaultProps = {}
 Input.propTypes = {
-    onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired
 }
 
 export default Input;
@@ -107,23 +109,23 @@ import React from 'react'
 import Input from './components/input'
 
 class Search extends React.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            input:''
-        }
+  constructor(props){
+    super(props);
+    this.state = {
+      input:''
     }
+  }
 
-    handleChange = value => this.setState({ input: value })
+  handleChange = value => this.setState({ input: value })
 
-    render() {
-        const { input } = this.state;
-        return (
-            <div className="search">
-                <Input onChange={event => this.handleChange(event.target.value)}/>
-            </div>
-        )
-    }
+  render() {
+    const { input } = this.state;
+    return (
+      <div className="search">
+        <Input onChange={event => this.handleChange(event.target.value)}/>
+      </div>
+    )
+  }
 }
 
 export default Search;

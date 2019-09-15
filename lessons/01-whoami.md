@@ -6,7 +6,8 @@ order: 1
 
 ![Simona&Artur](./images/Simona&Artur.jpg)
 
-Artur Daschevici Full Stack Engineer @NearForm, Passionate about all things tech related, with wide area of expertise ranging from backend, DevOps, Front End, working with NodeJS, React, React Native and well versed with Python
+Artur Daschevici Full Stack Engineer @Apperio, Passionate about all things tech related, with wide area of expertise ranging from backend, DevOps, Front End, working with Django, React, React Native.
+Artur is currently working on data analytics for a legal tech company building beautiful dashboards and complex data pipelines.
 
 Find me on:
 
