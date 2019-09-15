@@ -26,18 +26,18 @@ If you see an error similar to *Please commit your changes or stash them before 
 ```javascript
 
 export const fetchBookSuccessAction = books => ({
-    type:"FETCH_BOOKS_SUCCESS",
-    payload: {
-        books
-    }
+  type:"FETCH_BOOKS_SUCCESS",
+  payload: {
+    books
+  }
 })
 
 export const fetchBooksAction = url => dispatch => {
-    fetch(url)
-      .then(res => res.json())
-      .then(books => {
-        dispatch(fetchBookSuccessAction(books))
-      })
+  fetch(url)
+    .then(res => res.json())
+    .then(books => {
+    dispatch(fetchBookSuccessAction(books))
+    })
 }
 ```
 
@@ -47,14 +47,14 @@ export const fetchBooksAction = url => dispatch => {
 import { FETCH_BOOKS_SUCCESS } from './../actions/types'
 
 export default (state = {}, action) => {
-    switch(action.type) {
-        case FETCH_BOOKS_SUCCESS:
-            return {
-                books: action.payload.books
-            }
-        default:
-            return state
-    }
+  switch(action.type) {
+    case FETCH_BOOKS_SUCCESS:
+      return {
+        books: action.payload.books
+      }
+    default:
+      return state
+  }
 }
 ```
 
@@ -110,7 +110,7 @@ ReactDOM.render(<Provider store={configureStore()}><App /></Provider>, document.
   }
 
 App.defaultProps = {
-    books: []
+  books: []
 }
 App.propTypes = {
   fetchBooks: PropTypes.func.isRequired,
