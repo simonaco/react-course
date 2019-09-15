@@ -264,3 +264,95 @@ Book.propTypes = {
 
 export default withStyles(styles)(Book)
 ```
+
+### Individual exercise
+Convert the `./src/components/booklist/components/book.js` to avoid repetitive jsx using map.
+For this we will have to:
+1) Reduce payload coming from the API so that the table columns map to it 1 to 1
+2) Pass the `props` to the component so that we can have a loop for rendering the columns in the header
+3) Refactor `Book` component to consume the new passed in `props`
+
+### Sortable by columns
+Add a function that constructs a sorting function based on the order required
+```javascript
+function getSorting(order, orderBy) {
+  return order === 'desc'
+    ? (a, b) => (b[orderBy] < a[orderBy] ? -1 : 1)
+    : (a, b) => (a[orderBy] < b[orderBy] ? -1 : 1)
+}
+```
+
+Inside the `BookList` component we need to set a default sorting
+```javascript
+  constructor(props) {
+    ...
+    this.state = {
+      order: 'asc',
+      orderBy: 'original_title',
+    }
+  }
+```
+
+And we also need to add a handler for sorting
+```javascript
+  handleRequestSort = (event, property) => {
+    const orderBy = property
+    const { order } = this.state
+    let currentOrder = 'desc'
+
+    if (orderBy === property && order === 'desc') {
+      currentOrder = 'asc'
+    }
+
+    this.setState({ order: currentOrder, orderBy })
+  }
+```
+
+In the `src/components/booklist/components/book-list-header.js` we need to add the sorting capabilities on each of the
+table column headers
+
+Add a handler creator
+```javascript
+  createSortHandler = property => event => {
+    const { onRequestSort } = this.props
+    return onRequestSort(event, property)
+  }
+```
+
+Component `render()` update:
+```javascript
+  render = () => {
+    const { order, orderBy } = this.props
+    const { classes, columnHeaders } = this.props
+
+    return (
+      <TableHead>
+        <TableRow>
+          {columnHeaders.map(column => (
+            <TableCell
+              key={column.id}
+              numeric={column.numeric ? column.value : undefined}
+              padding={column.disablePadding ? 'none' : 'default'}
+              className={classes.tableCell}
+              sortDirection={orderBy === column.id ? order : false}
+            >
+              <Tooltip
+                title="Sort"
+                placement={column.numeric ? 'bottom-end' : 'bottom-start'}
+                enterDelay={300}
+              >
+                <TableSortLabel
+                  active={orderBy === column.id}
+                  direction={order}
+                  onClick={this.createSortHandler(column.id)}
+                >
+                  {column.label}
+                </TableSortLabel>
+              </Tooltip>
+            </TableCell>
+          ))}
+        </TableRow>
+      </TableHead>
+    )
+  }
+```
