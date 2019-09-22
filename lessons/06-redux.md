@@ -21,34 +21,45 @@ If you see an error similar to *Please commit your changes or stash them before 
 
 1. Install npm dependencies: ```npm i redux react-redux redux-thunk redux-devtools-extension```
 
-1. Create actions in *appActions.js* in a new folder called *actions*
+## The react app architecture we're proposing is called ducks or re-ducks 🦆
+The rule of thumb is all your state management and functionality should live beside your component
+
+1. Create `actions.js` in `src/components/app/`
 
 ```javascript
+import { FETCH_BOOKS } from './types'
 
-export const fetchBookSuccessAction = books => ({
-  type:"FETCH_BOOKS_SUCCESS",
+export const fetchBooksAction = books => ({
+  type: FETCH_BOOKS,
   payload: {
-    books
-  }
+    books,
+  },
 })
 
 export const fetchBooksAction = url => dispatch => {
   fetch(url)
     .then(res => res.json())
     .then(books => {
-    dispatch(fetchBookSuccessAction(books))
+      dispatch(fetchBooksAction(books))
     })
 }
 ```
 
-1. Create reducers in *appReducer.js* in a new folder called *reducers*
+Actions should be a plain javascript object with a `type` and optionally a `payload`. Good practice is to define your
+action types as constants in `src/components/app/types.js`:
 
 ```javascript
-import { FETCH_BOOKS_SUCCESS } from './../actions/types'
+export const FETCH_BOOKS = 'FETCH_BOOKS'
+```
+
+1. Create reducers in *reducer.js* in `src/components/app/reducers.js`
+
+```javascript
+import { FETCH_BOOKS } from './actions'
 
 export default (state = {}, action) => {
   switch(action.type) {
-    case FETCH_BOOKS_SUCCESS:
+    case FETCH_BOOKS:
       return {
         books: action.payload.books
       }
@@ -62,7 +73,7 @@ export default (state = {}, action) => {
 
 ```javascript
 import { combineReducers } from 'redux'
-import appReducer from './appReducer'
+import appReducer from '../components/app/reducers'
 
 export default combineReducers({
   appReducer
@@ -75,7 +86,7 @@ export default combineReducers({
 import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from 'redux-thunk'
-import rootReducer from '../reducers/rootReducer'
+import rootReducer from './rootReducer'
 
 
 const composeEnhancers = composeWithDevTools({
@@ -97,10 +108,15 @@ export default function configureStore(initialState={}) {
 import { Provider } from 'react-redux'
 import configureStore from './store'
 
-ReactDOM.render(<Provider store={configureStore()}><App /></Provider>, document.getElementById('root'));
+ReactDOM.render(
+  <Provider store={configureStore()}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+)
 ```
 
-1. In App.js configure to read data from store:
+1. In `src/components/app/index.js` configure to read data from store:
 
 ```javascript
 
@@ -129,6 +145,6 @@ export default connect(mapStateToProps, mapDispatchToProps)(App);
 
 ## Individual tasks
 
-- Add missing actions - `FETCH_BOOKS_STARTED FETCH_BOOKS_SUCCESS, FETCH_BOOKS_FAILED`
+- Add missing actions - `FETCH_BOOKS_STARTED, FETCH_BOOKS_FAILED`
 - Add error handling, API should be turned off
 - Add loading state

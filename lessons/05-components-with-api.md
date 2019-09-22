@@ -356,3 +356,64 @@ Component `render()` update:
     )
   }
 ```
+
+### Pagination
+Luckily `@material-ui/core/TablePagination` gives a great option for a drop in component for client side pagination
+
+It only needs to be imported into the `src/components/booklist/index.js`
+```javascript
+import TablePagination from '@material-ui/core/TablePagination'
+```
+
+Add the initial state to the BookList component:
+```javascript
+  constructor(props) {
+    super(props)
+    this.state = {
+      ...
+      page: 0,
+      rowsPerPage: 10,
+    }
+  }
+```
+
+Add handlers for changing the page and rowsPerPage, storing them in the component state
+```javascript
+  handleChangePage = (event, page) => {
+    this.setState({ page })
+  }
+
+  handleChangeRowsPerPage = event => {
+    this.setState({ rowsPerPage: event.target.value })
+  }
+
+```
+
+Update the render method to make use of the pagination abilities
+```javascript
+  render = () => {
+    ...
+    const { order, orderBy, rowsPerPage, page } = this.state
+    const start = page * rowsPerPage
+    const end = start + rowsPerPage
+    return (
+      <Paper className={classes.root}>
+        ...
+        <TablePagination
+          component="div"
+          count={books.length}
+          rowsPerPage={rowsPerPage}
+          page={page}
+          backIconButtonProps={{ 'aria-label': 'Previous Page' }}
+          nextIconButtonProps={{ 'aria-label': 'Next Page' }}
+          onChangePage={this.handleChangePage}
+          onChangeRowsPerPage={this.handleChangeRowsPerPage}
+        />
+      </Paper>
+    )
+  }
+```
+
+## Exercises:
+We managed to introduce quite a few warnings in the browser console, let's try and clean it up before we move on to the
+next chapter
