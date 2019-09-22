@@ -1,8 +1,9 @@
 ---
 path: "/components-with-api"
 title: "Components using API"
-order: 5
+order: 6
 ---
+
 ---
 
 In this session we'll learn:

@@ -1,12 +1,12 @@
 ---
 path: "/resources"
 title: "Resources"
-order: 10
+order: 11
 ---
 
 # VS Code links
 
-- Code Snippets [how-to](https://code.visualstudio.com/docs/editor/userdefinedsnippets?WT.mc_id=react-github-sicotin)  
+- Code Snippets [how-to](https://code.visualstudio.com/docs/editor/userdefinedsnippets?WT.mc_id=react-github-sicotin)
 - Interactive Playground [intro](https://code.visualstudio.com/updates/v1_9#_interactive-playground?WT.mc_id=react-github-sicotin)
 
 # Online Playgrounds

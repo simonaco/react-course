@@ -1,7 +1,7 @@
 ---
 path: "/testing"
 title: "Testing"
-order: 8
+order: 9
 ---
 
 ```git checkout 10-jest-test```
