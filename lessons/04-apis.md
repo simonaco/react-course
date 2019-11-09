@@ -66,6 +66,7 @@ If you see an error similar to *Please commit your changes or stash them before 
 fetch('/books/?_page=1')
   .then(response => response.json())
   .then(json => this.setState({
-    books: json
+    books: json,
+    filteredBooks: json,
 }))
 ```
