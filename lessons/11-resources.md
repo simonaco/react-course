@@ -1,7 +1,7 @@
 ---
 path: "/resources"
 title: "Resources"
-order: 11
+order: 12
 ---
 
 # VS Code links

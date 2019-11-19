@@ -193,6 +193,39 @@ case the App component. This provides us with an API similar to the browser hist
 ```javascript
 const { books, loading, history } = this.props
 ```
-## Individual tasks
 
-- Pass book object to edit page for editing and auto filling forms
+For editing books we need to add `<Link />` action to the edit button and we need to be able to pass the book id into
+the  Edit form to enable the fields population.
+
+In the Book component which renders each row we add the `<Link ... />` wrapper to pass the id like so:
+```javascript
+<Link to={{ pathname: '/edit', state: { bookId: book.id } }}>
+  <Fab color="secondary" aria-label="edit">
+    <EditIcon />
+  </Fab>
+</Link>
+```
+
+Let's also change the edit component and print out the ID of the book
+```javascript
+import React, { Fragment } from 'react'
+import Paper from '@material-ui/core/Paper'
+import withStyles from '@material-ui/core/styles/withStyles'
+import { withRouter } from 'react-router'
+import styles from './styles'
+
+const EditBook = ({ classes, history }) => {
+  const { bookId } = history.location.state // <--- this is where the state is stored
+  return (
+    <Fragment>
+      <div className={classes.container}>
+        <Paper elevation={1} className={classes.paper}>
+          <h1>Book Editing Form for book id {bookId}</h1>
+        </Paper>
+      </div>
+    </Fragment>
+  )
+}
+
+export default withRouter(withStyles(styles)(EditBook))
+```
