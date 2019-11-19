@@ -37,7 +37,7 @@ If you see an error similar to *Please commit your changes or stash them before 
 
 1. Move *books.json* file to the *server* folder
 
-1. Test that local server works by running it locally ```npx json-server server/books.json --config server/server-config.json``` and then opening this url in the browser http://localhost:4242/books/1
+1. Test that local server works by running it locally ```json-server server/books.json --port 4242``` and then opening this url in the browser http://localhost:4242/books/1
 
 ### Start json server and webpack when starting app using npm
 
@@ -48,7 +48,7 @@ If you see an error similar to *Please commit your changes or stash them before 
 ```json
 "scripts": {
   "start": "npm-run-all --parallel server client",
-  "server": "npx json-server server/books.json --config server/server-config.json",
+  "server": "npx json-server server/books.json --port 4242",
   "client": "react-scripts start",
   "build": "react-scripts build",
   "test": "react-scripts test",
@@ -66,6 +66,7 @@ If you see an error similar to *Please commit your changes or stash them before 
 fetch('/books/?_page=1')
   .then(response => response.json())
   .then(json => this.setState({
-    books: json
+    books: json,
+    filteredBooks: json,
 }))
 ```
