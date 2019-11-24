@@ -14,7 +14,7 @@ In this session we'll learn:
 
 ---
 
-```git checkout 06-redux-routing```
+```git checkout 06-react-redux-router```
 
 
 If you see an error similar to *Please commit your changes or stash them before you switch branches.*, you can either:
@@ -115,7 +115,7 @@ export default {
 }
 ```
 
-We want to also create components for the two types of headers:
+We want to also create components for the two types of headers `src/components/booklist/components/column-header-actions.js`:
 
 ```javascript
 import React from 'react'
