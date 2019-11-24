@@ -18,12 +18,21 @@ In this session we'll learn:
 
 1. Install react cli ```npm i create-react-app```
 
-1. Create new project ```npx create-react-app goodreads --use-npm```
+1. Create new project ```npx create-react-app my-goodreads --use-npm```
 
-1. `cd goodreads`
+1. `cd my-goodreads`
 
-1. Install `prettier`, this is an almost universal tool for auto-format and lint that is widely accepted. Run `npm i -D
-   prettier`
+1. Install the prettier VSCode plugin.
+
+    OSX: `CMD + Shift + P`
+
+    Windows: `Ctrl + Shift + P`
+
+    "Extensions: Install Extensions" and search for Prettier
+
+    Code -> Preferences -> Settings
+
+    look for the option for Formatting on save
 
 1. Add a file called `.prettierrc` in the goodreads project folder:
 

@@ -34,6 +34,28 @@ If you see an error similar to *Please commit your changes or stash them before 
 ### Part 1: Display list of elements from object
 ---
 
+1. Install the prettier VSCode plugin.
+
+    OSX: `CMD + Shift + P`
+
+    Windows: `Ctrl + Shift + P`
+
+    "Extensions: Install Extensions" and search for Prettier
+
+    Code -> Preferences -> Settings
+
+    look for the option for Formatting on save
+
+1. Add a file called `.prettierrc` in the goodreads project folder:
+
+```json
+{
+  "trailingComma": "es5",
+  "semi": false,
+  "singleQuote": true
+}
+```
+
 1. create a new folder `src/components/app/`
 
 1. Move App.* files in the new folder and rename to `index.*`
