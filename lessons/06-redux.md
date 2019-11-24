@@ -24,6 +24,14 @@ If you see an error similar to *Please commit your changes or stash them before 
 ## The react app architecture we're proposing is called ducks or re-ducks 🦆
 The rule of thumb is all your state management and functionality should live beside your component
 
+
+### First we want to install the prerequisites for wiring up redux ###
+
+`npm i react-redux redux redux-devtools-extension redux-thunk`
+
+
+### Let's get our hands dirty with some code ###
+
 1. Create `actions.js` in `src/components/app/`
 
 ```javascript

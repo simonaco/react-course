@@ -18,6 +18,8 @@ In this session we'll learn:
 By the end of this session you will have built a search component reading data from a JSON file.
 
 ---
+PS: if you haven't cloned the repo, now is a good time to do it. here's the
+[link](https://github.com/adaschevici/goodreads)
 
 We'll start off the first branch in the git repository
 

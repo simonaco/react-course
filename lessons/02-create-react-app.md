@@ -16,11 +16,19 @@ In this session we'll learn:
 
 ## Steps
 
-1. Initialize empty package.json ```npm init -y```
+1. Install react cli ```npm i create-react-app```
 
-1. Install react cli ```npm i -g create-react-app```
+1. Create new project ```npx create-react-app goodreads --use-npm```
 
-1. Create new project ```create-react-app good-reads --use-npm```
+1. Add a file called `.prettierrc` in the goodreads project folder:
+
+```json
+{
+  "trailingComma": "es5",
+  "semi": false,
+  "singleQuote": true
+}
+```
 
 ## Tasks
 

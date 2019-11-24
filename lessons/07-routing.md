@@ -31,6 +31,12 @@ routing mechanism to the application.
 
 The React provided router is `"react-router-dom"`
 
+### First we want to install the prerequisites for wiring up redux ###
+
+`npm i react-router-dom`
+
+
+### Let's get our hands dirty with some code ###
 
 ####**Open discussion**: How should we configure the config data so that it is usable for the extra UI elements ?####
 
@@ -185,7 +191,10 @@ export default Routes
 ## 3. Add the C.R.U.D. component for editing and adding books##
 
 ```javascript
-<Route path="/edit" render={() => <EditBook />} />
+import EditBook from '../components/edit'
+....
+    <Route path="/edit" render={() => <EditBook />} />
+....
 ```
 
 We need to inject `history` into our components to enable programatic navigation. Destructure the prop in the top component in our

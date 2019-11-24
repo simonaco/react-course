@@ -63,6 +63,16 @@ method. This is required because the a re-render needs to be triggered on every 
 that when we changed the search function. This is a better approach because we are not passing as many callbacks into
 the children and the logic is easier to reason about.
 
+Before:
+```javascript
+  search = term => {
+    this.setState({
+      filteredBooks: this.state.books.filter(book => book.title.includes(term)),
+    })
+  }
+```
+
+After:
 ```javascript
   render = () => {
     const { books, filter } = this.state
@@ -94,7 +104,8 @@ The recommended way of structuring components in your react project as recommend
 <iframe src="http://react-file-structure.surge.sh/" frameborder="0" width="100%" height="960" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 ### BookList
-At the time of writing my preferred way of structuring my components is this:
+At the time of writing my preferred way of structuring my components is
+[this](https://github.com/adaschevici/goodreads/tree/05-redux-start-app/src/components):
 ```
 ▾ booklist/
   ▾ components/
