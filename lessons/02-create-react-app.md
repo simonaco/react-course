@@ -20,6 +20,11 @@ In this session we'll learn:
 
 1. Create new project ```npx create-react-app goodreads --use-npm```
 
+1. `cd goodreads`
+
+1. Install `prettier`, this is an almost universal tool for auto-format and lint that is widely accepted. Run `npm i -D
+   prettier`
+
 1. Add a file called `.prettierrc` in the goodreads project folder:
 
 ```json
@@ -39,3 +44,24 @@ In this session we'll learn:
 ## Optional
 
 1. Eject configuration ```npm run eject```
+
+The directory structure should become more similar to the following:
+```
+▾ [ ]config/
+  ▾ [ ]jest/
+      [ ]cssTransform.js
+      [ ]fileTransform.js
+    [ ]env.js
+    [ ]modules.js
+    [ ]paths.js
+    [ ]pnpTs.js
+    [ ]webpack.config.js
+    [ ]webpackDevServer.config.js
+▸ [ ]public/
+▾ [ ]scripts/
+    [ ]build.js
+    [ ]start.js
+    [ ]test.js
+▸ [ ]src/
+
+```

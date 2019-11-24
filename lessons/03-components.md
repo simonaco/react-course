@@ -34,9 +34,13 @@ If you see an error similar to *Please commit your changes or stash them before 
 ### Part 1: Display list of elements from object
 ---
 
-1. Delete contents of App.js class
+1. create a new folder `src/components/app/`
 
-1. copy book.json from URL: https://github.com/adaschevici/goodreads/blob/01-react-components/src/books.json and import it: ```import {books} from './books.json'```
+1. Move App.* files in the new folder and rename to `index.*`
+
+1. copy book.json from URL: https://github.com/adaschevici/goodreads/blob/02-react-components-breakdown/src/books.json to `src/books.json`
+
+1. import it: ```import { books } from '../../books.json'```
 
 1. Create constructor and initialize state with books ```this.state = {books: books.slice(0,20)}```
 
@@ -45,7 +49,7 @@ If you see an error similar to *Please commit your changes or stash them before 
 ```javascript
 <ul>
   {this.state.books.map((book, index)=> (
-    <li key={index}>{ `${book.title} - ${book.author}`}</li>
+    <li key={index}>{ `${book.title} - ${book.authors}`}</li>
   ))}
 </ul>
 ```
@@ -62,8 +66,12 @@ If you see an error similar to *Please commit your changes or stash them before 
 
 onChange = (event) => {this.setState({searchTerm:event.target.value})}
 ```
-
-1. Add button and listen to click:
+2. Now because we have adjacent elements in a react component we need to wrap them in a parent element otherwise the render would throw
+   errors. In React we can do this using `Fragment`. Add these imports at the top in `src/components/app/index.js`
+   ```javascript
+   import React, { Component, Fragment } from 'react'
+   ```
+3. Add button and listen to click:
 
 ```javascript
 <button onClick={this.search}>Search</button>
@@ -81,11 +89,15 @@ search = () => {
 
 ## Part 3: Functional components
 ---
+React does type validation on props to enforce a standardized API, but it does not raise errors, it's like type hints
+To do this we need to add the `prop-types` npm package. Previously this was part of react but now it's its own package
 
-1. Refactor App.js to extract input and button into a Search component
+to install it run `npm i prop-types`
 
-- Create *components -> Search -> components* folder structure
-- Create input component as functional:
+1. Refactor `src/components/app/index.js` to extract input and button into a Search component
+
+- Create *`src/components/search/components`* folder structure
+- Create input component as functional inside `src/components/search/components/input.js`:
 
 ```javascript
 import React from 'react';
@@ -104,7 +116,7 @@ Input.propTypes = {
 export default Input;
 ```
 
-- Create smart component Search
+- Create smart component Search in `src/components/search/index.js`
 
 ```javascript
 import React from 'react'

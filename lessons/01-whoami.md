@@ -7,7 +7,7 @@ order: 1
 ![Simona&Artur](./images/Simona&Artur.jpg)
 
 Artur Daschevici Full Stack Engineer @Apperio, Passionate about all things tech related, with wide area of expertise ranging from backend, DevOps, Front End, working with Django, React, React Native.
-Artur is currently working on data analytics for a legal tech company building beautiful dashboards and complex data pipelines.
+Artur is currently working on data analytics for a legal tech company building beautiful dashboards and complex data pipelines. Part time speaker.
 
 Find me on:
 
@@ -27,6 +27,11 @@ Find me on:
 - [GitHub](https://github.com/simonaco)
 
 - [LinkedIn](https://www.linkedin.com/in/simona-cotin-2ba8747/)
+
+---
+
+Talks:
+- [From Angular to React (and back again) Simona & Artur](https://www.youtube.com/watch?v=0n0qFcnLLnQ)
 
 ---
 

@@ -14,6 +14,11 @@ In this session we'll learn:
 - History & motivation
 - Main concepts
 
-# Tasks
+# Virtual DOM change detection in practice
+While we will mostly be using chrome for development in some instances Firefox provides some tools that work better with
+the online editors ( codesandbox, codepen ). In this case the flash repaint on dom elements
 
+# Pro tip 💡
+# If you want to try this for yourself
+Install firefox developer edition from [here](https://www.mozilla.org/en-US/firefox/developer/)
 1. Navigate to [this](https://codepen.io/kinsomicrote/pen/EEqNzq) Codepen and check elements updating

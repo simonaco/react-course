@@ -8,9 +8,9 @@ In this workshop we'll learn how to build a website using React
 
 ## Prerequisites
 
-1. A recent version of Node (8+)
+1. A recent version of Node (10+) (tested with latest, compatible with 12+)
 
-1. VS Code [here](https://code.visualstudio.com/download/?WT.mc_id=react-workshop-github-sicotin)  
+1. VS Code [here](https://code.visualstudio.com/download/?WT.mc_id=react-workshop-github-sicotin)
 
 1. VS Code extension for React development [here](https://marketplace.visualstudio.com/items?itemName=burkeholland.react-food-truck&WT.mc_id=react-workshop-github-sicotin)
 
