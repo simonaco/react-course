@@ -38,6 +38,23 @@ If you see an error similar to *Please commit your changes or stash them before 
 
 1. Move App.* files in the new folder and rename to `index.*`
 
+1. Inside `src/components/app/index.js` create a class that will serve as our main App component
+```javascript
+class App extends Component {
+  constructor(props) {
+    super(props)
+  }
+
+  render = () => {
+    return (
+      <div>Your code will go here</div>
+    )
+  }
+}
+
+export default App
+```
+
 1. copy book.json from URL: https://github.com/adaschevici/goodreads/blob/02-react-components-breakdown/src/books.json to `src/books.json`
 
 1. import it: ```import { books } from '../../books.json'```
