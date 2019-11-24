@@ -15,7 +15,7 @@ In this session we'll learn:
 
 ---
 
-```git checkout 02-react-components-breakdown```
+```git checkout 03-react-components-fetching```
 
 If you see an error similar to *Please commit your changes or stash them before you switch branches.*, you can either:
 
