@@ -14,6 +14,9 @@ In this session we'll learn:
 
 ---
 
+
+```git checkout 04-react-components-material```
+
 ### Building our table
 
 In order to have a table we need table headers. We will have them as a static collection on our client side.

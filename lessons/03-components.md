@@ -131,6 +131,8 @@ search = () => {
 
 ## Part 3: Functional components
 ---
+```git checkout 02-react-components-breakdown```
+
 React does type validation on props to enforce a standardized API, but it does not raise errors, it's like type hints
 To do this we need to add the `prop-types` npm package. Previously this was part of react but now it's its own package
 

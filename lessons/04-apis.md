@@ -43,6 +43,8 @@ If you see an error similar to *Please commit your changes or stash them before 
 
 1. Install npm-run-all ```npm i npm-run-all```
 
+1. Install material components components library: `npm i @material-ui/core @material-ui/icons`
+
 1. Update list of scripts in package.json to start server & client
 
 ```json
