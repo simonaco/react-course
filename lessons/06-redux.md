@@ -9,11 +9,11 @@ order: 7
 
 ---
 
-```git checkout 04-react-components-material```
+```git checkout 05-redux-start-app```
 
 If you see an error similar to *Please commit your changes or stash them before you switch branches.*, you can either:
 
-1. commit changes to your own repo ```git commit -a -m "message"```
+1. commit changes to your own repo ```git add . && git commit -m "message"```
 
 1. stash changes by running ```git stash save "some_name_here" --include-untracked```
 
@@ -44,7 +44,7 @@ export const fetchBooksAction = books => ({
   },
 })
 
-export const fetchBooksAction = url => dispatch => {
+export default url => dispatch => {
   fetch(url)
     .then(res => res.json())
     .then(books => {
@@ -63,7 +63,7 @@ export const FETCH_BOOKS = 'FETCH_BOOKS'
 1. Create reducers in *reducer.js* in `src/components/app/reducers.js`
 
 ```javascript
-import { FETCH_BOOKS } from './actions'
+import { FETCH_BOOKS } from './types'
 
 export default (state = {}, action) => {
   switch(action.type) {
@@ -77,7 +77,7 @@ export default (state = {}, action) => {
 }
 ```
 
-1. Create root reducer in *rootReducer.js* in folder called *reducers*
+1. Create root reducer in `rootReducer.js` in folder called `src/store/`
 
 ```javascript
 import { combineReducers } from 'redux'
@@ -88,7 +88,7 @@ export default combineReducers({
 })
 ```
 
-1. Create *index.js* in a new folder called *store* and paste in
+1. Create *index.js* in `src/store/` and paste in
 
 ```javascript
 import { createStore, applyMiddleware } from 'redux'
@@ -131,6 +131,13 @@ ReactDOM.render(
   componentDidMount() {
     const { fetchBooks } = this.props;
     fetchBooks('/books');
+  }
+  ...
+
+  render = () {
+      const { filter } = this.state
+      const { books } = this.props
+      ....
   }
 
 App.defaultProps = {
