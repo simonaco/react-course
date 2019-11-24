@@ -47,7 +47,7 @@ class App extends Component {
 
   render = () => {
     return (
-      <div>Your code will go here</div>
+      <div>Your markup will go here</div>
     )
   }
 }
@@ -56,6 +56,8 @@ export default App
 ```
 
 1. copy book.json from URL: https://github.com/adaschevici/goodreads/blob/02-react-components-breakdown/src/books.json to `src/books.json`
+
+using curl ```curl -o src/books.json https://raw.githubusercontent.com/adaschevici/goodreads/02-react-components-breakdown/src/books.json```
 
 1. import it: ```import { books } from '../../books.json'```
 
