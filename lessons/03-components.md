@@ -40,6 +40,8 @@ If you see an error similar to *Please commit your changes or stash them before 
 
 1. copy book.json from URL: https://github.com/adaschevici/goodreads/blob/02-react-components-breakdown/src/books.json to `src/books.json`
 
+using curl ```curl -o src/books.json https://raw.githubusercontent.com/adaschevici/goodreads/02-react-components-breakdown/src/books.json```
+
 1. import it: ```import { books } from '../../books.json'```
 
 1. Create constructor and initialize state with books ```this.state = {books: books.slice(0,20)}```
