@@ -48,7 +48,7 @@ If you see an error similar to *Please commit your changes or stash them before 
 ```json
 "scripts": {
   "start": "npm-run-all --parallel server client",
-  "server": "npx json-server server/books.json --port 4242",
+  "server": "npx json-server server/books.json --config server/server-config.json",
   "client": "react-scripts start",
   "build": "react-scripts build",
   "test": "react-scripts test",
@@ -60,7 +60,7 @@ If you see an error similar to *Please commit your changes or stash them before 
 
 1. Update package.json to use proxy api requests in development: ```"proxy": "http://localhost:4242"```
 
-1. Update App.js component to fetch books from the API in the componentDidMount lifecycle method:
+1. Update `src/components/app/index.js` component to fetch books from the API in the componentDidMount lifecycle method:
 
 ```javascript
 fetch('/books/?_page=1')
