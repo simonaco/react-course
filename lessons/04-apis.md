@@ -27,7 +27,7 @@ If you see an error similar to *Please commit your changes or stash them before 
 
 1. Install JSON Server ```npm install -g json-server```
 
-1. Create folder *server* and *server-config.json* file with:
+1. Create folder `server/` at the root of the folder and `server/server-config.json` file with:
 
 ```json
 {
