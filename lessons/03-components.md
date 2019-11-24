@@ -61,6 +61,7 @@ If you see an error similar to *Please commit your changes or stash them before 
 1. Move App.* files in the new folder and rename to `index.*`
 
 1. Inside `src/components/app/index.js` create a class that will serve as our main App component
+
 ```javascript
 class App extends Component {
   constructor(props) {
