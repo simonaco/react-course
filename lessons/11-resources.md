@@ -4,6 +4,10 @@ title: "Resources"
 order: 12
 ---
 
+# Feedback
+
+Tell us about what went well for you and what can we improve [form](https://forms.gle/bKnXQU1pYSvDG84g9)
+
 # VS Code links
 
 - Code Snippets [how-to](https://code.visualstudio.com/docs/editor/userdefinedsnippets?WT.mc_id=react-github-sicotin)
