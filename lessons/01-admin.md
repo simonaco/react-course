@@ -16,7 +16,7 @@ In this workshop we'll learn how to build a website using React
 
 1. React developer tools for Chrome [here](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
 
-1. Redux for Chrome [here](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+1. Redux for Chrome [here](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
 
 1. JSON server for quick REST APIs [here](https://github.com/typicode/json-server)
 
