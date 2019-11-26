@@ -8,7 +8,7 @@ order: 10
 
 ---
 
-```git checkout 10-jest-test```
+```git checkout 08-jest-testing```
 
 If you see an error similar to *Please commit your changes or stash them before you switch branches.*, you can either:
 
