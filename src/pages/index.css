@@ -9,9 +9,6 @@ body {
   margin-top: 20px;
 }
 
-.index .jumbotron {
-}
-
 .example-table {
   border-collapse: separate;
 }
@@ -40,9 +37,6 @@ body {
 
 .example-table .w {
   border-left-color: transparent;
-}
-
-.lesson-content table {
 }
 
 .lesson-content td {
