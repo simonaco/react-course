@@ -32,7 +32,7 @@ Inside of `gatsby-config.js` be sure to fill out the `siteMetadata` fields, incl
 
 ## Azure Pipelines
 
-Azure has a free-for-open-source continuous integration platform called [Azure Pipelines](https://azure.microsoft.com/en-us/services/devops/pipelines/?WT.mc_id=gatsby-github-brholt). This project is already set up for it with the `azure-pipelines.yml`. Just add the project to Pipelines and it'll immediately correctly build the project. From there you'll have a build artifact that you can use to deploy to [Azure Static Sites](https://azure.microsoft.com/en-us/blog/azure-storage-static-web-hosting-public-preview/?WT.mc_id=gatsby-github-brholt) or [GitHub Pages](https://pages.github.com/).
+Azure has a free-for-open-source continuous integration platform called [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/?WT.mc_id=startup-0000-sicotin). This project is already set up for it with the `azure-pipelines.yml`. Just add the project to Pipelines and it'll immediately correctly build the project. From there you'll have a build artifact that you can use to deploy to [Azure Static Sites](https://azure.microsoft.com/blog/azure-storage-static-web-hosting-public-preview/?WT.mc_id=startup-0000-sicotin) or [GitHub Pages](https://pages.github.com/).
 
 ## GitHub Pages
 
